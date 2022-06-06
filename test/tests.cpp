@@ -3,8 +3,9 @@
 
 TEST(avl_tree, kth_stat) {
     AvlTree<int> tree;
-
+    EXPECT_THROW(tree.find_kth_statistic(0),std::invalid_argument);
     tree.Add(5);
+    EXPECT_THROW(tree.find_kth_statistic(1),std::invalid_argument);
     EXPECT_EQ(tree.find_kth_statistic(0), 5);
 
     tree.Add(3);

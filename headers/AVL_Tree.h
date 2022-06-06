@@ -48,6 +48,9 @@ public:
     }
 
     T find_kth_statistic(size_t k) {
+        if(!root){
+            throw std::invalid_argument{"incorrect arg"};
+        }
         if (k >= root->count) {
             throw std::invalid_argument{"incorrect arg"};
         }
