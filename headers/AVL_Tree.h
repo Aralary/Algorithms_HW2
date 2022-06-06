@@ -125,7 +125,7 @@ private:
 
             delete node;
 
-            if (left->height < right->height) {
+            if (getHeight(left) < getHeight(right)) {
                 if (!right) {
                     return left;
                 }
